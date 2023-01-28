@@ -1,12 +1,9 @@
 package com.driver;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 public class User {
     private String name;
     private String mobile;
-    @Autowired
-    WhatsappRepository wr;
+
     public User(String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
