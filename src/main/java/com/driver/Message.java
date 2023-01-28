@@ -1,6 +1,5 @@
 package com.driver;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Message {
@@ -8,15 +7,21 @@ public class Message {
     private String content;
     private Date timestamp;
 
-    public Message(int id, String content){
+    public Message(int id) {
         this.id = id;
-        this.content = content;
-//        Date date = new Date();
-//        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         this.timestamp = new Date();
     }
 
-
+    public Message(int id, String content) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = new Date();
+    }
+    public Message(int id, String content, Date timestamp) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = timestamp;
+    }
 
     public int getId() {
         return id;
